@@ -15,3 +15,12 @@ function getCookie(szName) {
     }
     return szValue;
 }
+//******************************************************************************************
+// Suppression d'un cookie
+//******************************************************************************************
+
+function deleteCookie(szName) {
+    var tmp = getCookie(szName);
+    if (tmp)
+    { setCookie(szName, tmp, (new Date(1))); }
+}
